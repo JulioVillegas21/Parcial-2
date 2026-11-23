@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examen 2 — Análisis y Diseño de Algoritmos | Guía Paso a Paso (UNViMe)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN FIJA -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-badge">AyDA</div>
+        <div>
+          <div class="brand-title">Examen 2 — Resolución Paso a Paso</div>
+          <div class="brand-sub">UNViMe · Ingeniería en Sistemas · Análisis y Diseño de Algoritmos</div>
+        </div>
+      </div>
+
+      <nav class="nav-tabs" aria-label="Secciones del examen">
+        <button class="nav-btn active" data-target="sec-inicio">
+          <span class="nav-num">★</span> Inicio
+        </button>
+        <button class="nav-btn" data-target="sec-punto1">
+          <span class="nav-num">1</span> Punto 1 · Levenshtein
+        </button>
+        <button class="nav-btn" data-target="sec-punto2">
+          <span class="nav-num">2</span> Punto 2 · Floyd-Warshall
+        </button>
+        <button class="nav-btn" data-target="sec-punto3">
+          <span class="nav-num">3</span> Punto 3 · Matriz 20×20
+        </button>
+        <button class="nav-btn" data-target="sec-punto4">
+          <span class="nav-num">4</span> Punto 4 · 1.000.000 Datos
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ====================================================================
+         SECCIÓN 0: INICIO / MAPA GENERAL
+         ==================================================================== -->
+    <section id="sec-inicio" class="section-view active">
+      <div class="hero-card">
+        <div class="eyebrow">Guía Interactiva de Estudio y Defensa</div>
+        <h1>Examen 2 — Práctica de Análisis y Diseño de Algoritmos</h1>
+        <p>
+          Esta página explica <strong>paso por paso, inciso por inciso y con su fundamento teórico</strong>
+          cómo se resuelve cada uno de los 4 puntos del examen práctico. Cada sección está separada para
+          estudiar con claridad e incluye visualizadores interactivos alimentados con los <strong>datos reales</strong>
+          calculados por el sistema Python.
+        </p>
+        <div class="pill-row">
+          <span class="pill cyan">Unidad 2 · Eficiencia y Cotas</span>
+          <span class="pill rose">Unidad 3 · Fuerza Bruta</span>
+          <span class="pill amber">Unidad 4 · Reduce y Conquista</span>
+          <span class="pill green">Unidad 5 · Divide y Conquista</span>
+          <span class="pill purple">Unidad 6 · Transforma y Conquista</span>
+          <span class="pill cyan">Unidad 7 · Programación Dinámica</span>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <article class="home-card" data-jump="sec-punto1">
+          <div>
+            <span class="inciso-badge theory">Unidad 7 · Programación Dinámica</span>
+            <h2>Punto 1 — Corrector Ortográfico (Levenshtein)</h2>
+            <p>
+              Corrección de <code>"programaceón"</code> contra un diccionario de 6 palabras. Incluye teoría de
+              tabulación bottom-up, matriz interactiva celda por celda (Inciso F), camino óptimo (H), operaciones
+              en orden (I), impacto de las tildes y BK-Tree.
+            </p>
+          </div>
+          <div class="home-cta">Abrir Sección 1 →</div>
+        </article>
+
+        <article class="home-card" data-jump="sec-punto2">
+          <div>
+            <span class="inciso-badge theory">Unidad 7 · Grafos y PD</span>
+            <h2>Punto 2 — Algoritmo de Floyd-Warshall</h2>
+            <p>
+              Caminos mínimos entre los 13 vértices (15 aristas bidireccionales + 5 arcos negativos). Grafo SVG
+              interactivo que ilumina <code>M→J</code>, <code>O→P</code> y <code>C→K</code>, matrices <code>D</code>
+              y <code>P</code>, evolución paso a paso por cada intermedio <code>k</code> y chequeo de ciclos negativos.
+            </p>
+          </div>
+          <div class="home-cta">Abrir Sección 2 →</div>
+        </article>
+
+        <article class="home-card" data-jump="sec-punto3">
+          <div>
+            <span class="inciso-badge theory">Unidades 3 y 6 · Trie vs Fuerza Bruta</span>
+            <h2>Punto 3 — Búsqueda en Matriz de Caracteres</h2>
+            <p>
+              Localización de <code>ARBOL</code>, <code>HEAPS</code>, <code>SORTS</code>, <code>NODOS</code> y
+              <code>GRAFO</code> en las 8 direcciones sobre la grilla 20×20. Justificación del Árbol Trie,
+              comparativa de comparaciones contra Fuerza Bruta y matriz interactiva coloreada.
+            </p>
+          </div>
+          <div class="home-cta">Abrir Sección 3 →</div>
+        </article>
+
+        <article class="home-card" data-jump="sec-punto4">
+          <div>
+            <span class="inciso-badge theory">Unidades 2, 4, 5, 6 y 7 · Big Data</span>
+            <h2>Punto 4 — "Mejor período de utilidad" (1.000.000 datos)</h2>
+            <p>
+              Dividido en sub-pestañas limpias: <strong>Parte A</strong> (Kadane vs. Divide y Vencerás + gráfico real),
+              <strong>Parte B</strong> (Top-10 no solapados con Max-Heap incremental) y <strong>Parte C</strong>
+              (p50, p90, p95 con QuickSelect Lomuto vs. Hoare vs. Merge Sort + validación con Búsqueda Binaria).
+            </p>
+          </div>
+          <div class="home-cta">Abrir Sección 4 →</div>
+        </article>
+      </div>
+
+      <div class="card" style="margin-top: 24px;">
+        <div class="card-title">
+          <span class="inciso-badge cyan">Mapa Teórico</span>
+          Resumen de Paradigmas, Algoritmos y Complejidades del Examen
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Punto</th>
+                <th>Problema</th>
+                <th>Paradigma / Unidad</th>
+                <th>Algoritmos Aplicados</th>
+                <th>Complejidad Temporal</th>
+                <th>Memoria Auxiliar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono text-cyan">Punto 1</td>
+                <td>Corrector ortográfico</td>
+                <td>Programación Dinámica (U7)</td>
+                <td>Distancia de Levenshtein + Backtracking (+ BK-Tree)</td>
+                <td class="mono text-green">O(m · n)</td>
+                <td class="mono">O(m · n)</td>
+              </tr>
+              <tr>
+                <td class="mono text-cyan">Punto 2</td>
+                <td>Todos los caminos mínimos</td>
+                <td>Programación Dinámica (U7)</td>
+                <td>Floyd-Warshall (Matrices D y P)</td>
+                <td class="mono text-green">O(V³)</td>
+                <td class="mono">O(V²)</td>
+              </tr>
+              <tr>
+                <td class="mono text-cyan">Punto 3</td>
+                <td>Búsqueda de palabras 2D (8 dir.)</td>
+                <td>Transforma y Conquista (U6) vs. Fuerza Bruta (U3)</td>
+                <td>Árbol Trie + Poda vs. Fuerza Bruta 2D</td>
+                <td class="mono text-green">O(ΣL + R·C·L)</td>
+                <td class="mono">O(ΣL)</td>
+              </tr>
+              <tr>
+                <td class="mono text-cyan">Punto 4A</td>
+                <td>Sub-arreglo máximo (1M)</td>
+                <td>PD (U5/U7) vs. Divide y Vencerás (U5)</td>
+                <td>Kadane vs. Divide y Vencerás</td>
+                <td class="mono text-green">O(n) vs. O(n log n)</td>
+                <td class="mono">O(1) vs. O(log n)</td>
+              </tr>
+              <tr>
+                <td class="mono text-cyan">Punto 4B</td>
+                <td>Top-10 períodos no solapados</td>
+                <td>Estructuras (U6) + D&amp;V incremental</td>
+                <td>Max-Heap + Partición de segmentos (Kadane)</td>
+                <td class="mono text-green">O(k·n + k log k)</td>
+                <td class="mono">O(k)</td>
+              </tr>
+              <tr>
+                <td class="mono text-cyan">Punto 4C</td>
+                <td>Mediana y Percentiles (p50/90/95)</td>
+                <td>Reduce y Conquista (U4) + D&amp;V (U5)</td>
+                <td>QuickSelect (Hoare / Lomuto) vs. Merge Sort + B. Binaria</td>
+                <td class="mono text-green">O(n) prom. vs. O(n log n)</td>
+                <td class="mono">O(1) vs. O(n)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 1: PUNTO 1 — CORRECTOR ORTOGRÁFICO (LEVENSHTEIN)
+         ==================================================================== -->
+    <section id="sec-punto1" class="section-view">
+      <div class="hero-card">
+        <div class="eyebrow">Sección 1 · Unidad 7 — Programación Dinámica</div>
+        <h1>Punto 1: Corrector Ortográfico con Distancia de Levenshtein</h1>
+        <p>
+          Dada la palabra mal escrita <code class="mono">"programaceón"</code> y un diccionario de 6 palabras,
+          debemos calcular las distancias de edición, construir la matriz completa, filtrar las palabras con
+          distancia <strong>≤ 3</strong>, ordenarlas, simular la salida <em>"¿Quisiste decir?"</em>, reconstruir el
+          camino óptimo desde la última celda hasta la primera e indicar exactamente qué operaciones se hicieron y en qué orden.
+        </p>
+        <div class="pill-row">
+          <span class="pill cyan">Tabulación Bottom-Up</span>
+          <span class="pill green">Complejidad: O(m · n)</span>
+          <span class="pill amber">Incisos A hasta I</span>
+          <span class="pill purple">Extra U7: BK-Tree</span>
+        </div>
+      </div>
+
+      <!-- 1.1 Teoría -->
+      <div class="card">
+        <div class="card-title">
+          <span class="inciso-badge theory">Teoría · Unidad 7</span>
+          ¿Por qué se usa Programación Dinámica y cómo funciona Levenshtein?
+        </div>
+        <p>
+          La <strong>Distancia de Levenshtein</strong> mide la <strong>cantidad mínima de operaciones elementales</strong>
+          necesarias para transformar una cadena origen <em>S</em> (de longitud <em>m</em>) en una cadena destino <em>T</em>
+          (de longitud <em>n</em>). Existen exactamente <strong>3 operaciones permitidas</strong>, cada una con costo <strong>1</strong>:
+        </p>
+        <div class="grid-3" style="margin: 14px 0;">
+          <div class="kpi-box">
+            <div class="kpi-label">Operación 1 · Izquierda</div>
+            <div class="kpi-value text-green">Inserción (+1)</div>
+            <div class="kpi-sub">Agrega un carácter de la palabra destino. En la matriz equivale a venir de <code>dp[i][j-1] + 1</code>.</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-label">Operación 2 · Arriba</div>
+            <div class="kpi-value text-rose">Eliminación (+1)</div>
+            <div class="kpi-sub">Borra un carácter de la palabra origen. En la matriz equivale a venir de <code>dp[i-1][j] + 1</code>.</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-label">Operación 3 · Diagonal</div>
+            <div class="kpi-value text-amber">Sustitución (+0 / +1)</div>
+            <div class="kpi-sub">Si las letras coinciden cuesta <strong>0</strong> (sin cambio); si difieren cuesta <strong>1</strong>. Viene de <code>dp[i-1][j-1] + costo</code>.</div>
+          </div>
+        </div>
+
+        <p>
+          <strong>¿Por qué Programación Dinámica (Unidad 7)?</strong> Porque el problema cumple los dos principios de Bellman:
+          <strong>subestructura óptima</strong> (la mejor edición entre dos cadenas se construye a partir de la mejor edición de sus prefijos)
+          y <strong>solapamiento de subproblemas</strong> (los mismos pares de prefijos se necesitarían calcular miles de veces por recursión pura).
+          Al guardar las respuestas en una <strong>tabla <code>dp</code> de tamaño (m+1) × (n+1)</strong> mediante <em>tabulación bottom-up</em>,
+          bajamos de tiempo exponencial a <strong>Θ(m · n)</strong>.
+        </p>
+
+        <div class="formula-box">Casos base (bordes de la matriz):
+  dp[i][0] = i   (transformar i letras en cadena vacía "" requiere i eliminaciones)
+  dp[0][j] = j   (transformar "" en j letras requiere j inserciones)
+
+Relación de recurrencia para cada celda interior (i ≥ 1, j ≥ 1) [Inciso F]:
+  costo = 0  si origen[i-1] == destino[j-1],  sino  1
+  dp[i][j] = min(
+      dp[i][j-1] + 1,          // 1. Inserción
+      dp[i-1][j] + 1,          // 2. Eliminación
+      dp[i-1][j-1] + costo     // 3. Sustitución (o coincidencia si costo = 0)
+  )</div>
+
+        <div class="callout amber">
+          <strong>Punto clave sobre las tildes ("programaceón" vs "programador"):</strong><br />
+          Si comparás caracteres de forma <strong>literal (<code>ó ≠ o</code>)</strong>, cambiar la <code>ó</code> con tilde por <code>o</code> sin tilde
+          suma 1 sustitución extra y da <strong>distancia = 4</strong> (dejando a <code>programador</code> fuera del umbral ≤ 3).
+          Si <strong>normalizás tildes (<code>ó = o</code>)</strong>, da <strong>distancia = 3</strong>, que coincide exactamente con el ejemplo
+          impreso en la hoja del examen (<code>2. programador (distancia = 3)</code>). Usá el selector de abajo para comparar ambos criterios en vivo:
+        </div>
+
+        <div class="controls-bar">
+          <span class="mono" style="color: var(--text-muted);">Modo de tildes:</span>
+          <button id="p1-modo-norm" class="btn green active">Sin distinguir tildes (ó = o) · programador = 3</button>
+          <button id="p1-modo-exact" class="btn amber">Distinguiendo tildes (ó ≠ o) · programador = 4</button>
+        </div>
+      </div>
+
+      <!-- 1.2 Incisos A, B, C, D -->
+      <div class="card">
+        <div class="card-title">
+          <span class="inciso-badge">Incisos A, B, C y D</span>
+          Cálculo de distancias, filtrado (≤ 3), ordenamiento y salida del corrector
+        </div>
+
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-circle">A</div>
+            <div>
+              <h4>Paso A — Calcular todas las distancias contra el diccionario</h4>
+              <p>Ejecutamos Levenshtein entre <code>"programaceón"</code> y cada una de las 6 palabras del diccionario, obteniendo el valor de la última celda <code>dp[m][n]</code>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-wrap" style="margin-top: 14px;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Palabra del diccionario</th>
+                <th>Longitud</th>
+                <th>Distancia mínima (G)</th>
+                <th>Filtro Inciso B (≤ 3)</th>
+                <th>Ediciones principales</th>
+              </tr>
+            </thead>
+            <tbody id="p1-tabla-distancias"></tbody>
+          </table>
+        </div>
+
+        <div class="grid-2" style="margin-top: 18px;">
+          <div class="kpi-box">
+            <div class="kpi-label">Incisos B y C — Filtradas (≤ 3) y Ordenadas</div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 10px;">
+              Primero descartamos toda palabra cuya distancia supere 3 (<strong>Inciso B</strong>) y luego ordenamos
+              las restantes de menor a mayor distancia para mostrar primero la más parecida (<strong>Inciso C</strong>):
+            </p>
+            <ol id="p1-lista-bc" class="clean-list mono" style="font-size: 0.92rem;"></ol>
+          </div>
+
+          <div class="spellcheck-box">
+            <div class="kpi-label" style="color: var(--green);">Inciso D — Salida simulada del corrector</div>
+            <div id="p1-salida-d" style="margin-top: 8px; line-height: 1.8;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1.3 Incisos E, F, G, H, I interactivos -->
+      <div class="card">
+        <div class="card-title">
+          <span class="inciso-badge result">Incisos E, F, G, H e I</span>
+          Explorador Interactivo: Matriz Completa, Relleno por Celda, Camino Óptimo y Operaciones
+        </div>
+        <p>
+          Elegí cualquiera de las 6 palabras del diccionario para ver su <strong>matriz completa (E)</strong>,
+          su <strong>distancia mínima (G)</strong>, el <strong>camino óptimo resaltado en verde desde (m,n) hasta (0,0) (H)</strong>
+          y las <strong>operaciones exactas en orden cronológico (I)</strong>.
+          <strong style="color: var(--amber);">Tip interactivo (Inciso F): hacé clic en cualquier celda de la matriz</strong>
+          para ver los 3 números exactos (Inserción, Eliminación y Sustitución) que se compararon para rellenarla.
+        </p>
+
+        <div id="p1-word-buttons" class="controls-bar"></div>
+
+        <div id="p1-resumen-palabra" class="grid-3" style="margin-bottom: 16px;"></div>
+
+        <h3>Inciso E — Matriz completa de Levenshtein (verde = camino óptimo)</h3>
+        <div class="table-wrap" style="padding: 12px; background: #0b1222;">
+          <div id="p1-matriz-container"></div>
+        </div>
+
+        <div id="p1-cell-inspector" class="cell-inspector">
+          <strong style="color: var(--amber);">Inspector del Inciso F (Relleno de celda):</strong>
+          Hacé clic sobre cualquier celda interior de la matriz de arriba para ver el cálculo exacto de
+          <code>Inserción</code>, <code>Eliminación</code> y <code>Sustitución</code>.
+        </div>
+
+        <h3>Inciso H — Reconstrucción del camino óptimo (desde la última celda hasta la primera)</h3>
+        <p style="font-size: 0.9rem; color: var(--text-secondary);">
+          Para saber <em>qué</em> cambios produjeron la distancia mínima, nos paramos en la esquina inferior derecha
+          <code>(m, n)</code> y retrocedemos hasta <code>(0, 0)</code> eligiendo en cada paso al vecino del cual provino
+          el mínimo (diagonal si coincide o sustituye, arriba si elimina, izquierda si inserta):
+        </p>
+        <div id="p1-camino-h" class="formula-box" style="border-left-color: var(--green);"></div>
+
+        <h3>Inciso I — Operaciones exactas realizadas y en qué orden</h3>
+        <p style="font-size: 0.9rem; color: var(--text-secondary);">
+          Al invertir el recorrido del Inciso H obtenemos las operaciones en el orden real en que transforman
+          <code>"programaceón"</code> en la palabra del diccionario paso a paso:
+        </p>
+        <div id="p1-operaciones-i" class="steps-list"></div>
+      </div>
+
+      <!-- 1.4 Bonus Unidad 7: BK-Tree -->
+      <div class="card">
+        <div class="card-title">
+          <span class="inciso-badge theory">Conexión Unidad 7 · Diap. 36</span>
+          Optimización para diccionarios grandes: Árbol BK (Burkhard-Keller Tree)
+        </div>
+        <p>
+          En las diapositivas de la cátedra (Unidad 7, Diapositiva 36) se propone llevar el corrector un paso más allá:
+          en lugar de comparar contra <em>todas</em> las palabras de una lista lineal, almacenar el diccionario en un
+          <strong>BK-Tree</strong>. Como Levenshtein es una <em>métrica</em> (cumple la <strong>desigualdad triangular</strong>:
+          <code>|d(q, p) - d(p, h)| ≤ d(q, h)</code>), si la palabra consultada <code>q</code> está a distancia <code>d</code> de un nodo,
+          solo necesitamos visitar los hijos cuyas aristas estén en el rango <code>[d - tolerancia, d + tolerancia]</code>,
+          podando ramas enteras del diccionario.
+        </p>
+        <pre class="tree-pre">└── (raíz) programación
+    ├── [d=2] programaciónes
+    ├── [d=4] programador
+    │   └── [d=5] programaciónal
+    ├── [d=4] programación web
+    └── [d=10] probabilístico   ← Rama podada automáticamente cuando d(consulta, raíz) = 1 y tolerancia = 3</pre>
+      </div>
+
+      <div class="footer-nav">
+        <button class="btn" data-jump="sec-inicio">← Volver al Inicio</button>
+        <button class="btn active" data-jump="sec-punto2">Siguiente: Punto 2 (Floyd-Warshall) →</button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 2: PUNTO 2 — FLOYD-WARSHALL
+         ==================================================================== -->
+    <section id="sec-punto2" class="section-view">
+      <div class="hero-card">
+        <div class="eyebrow">Sección 2 · Unidad 7 — Grafos Ponderados y Programación Dinámica</div>
+        <h1>Punto 2: Caminos Mínimos con Algoritmo de Floyd-Warshall</h1>
+        <p>
+          Dado el grafo dirigido ponderado de <strong>13 vértices</strong> (<code>A, B, C, D, E, H, I, J, K, L, M, O, P</code>)
+          con <strong>15 aristas bidireccionales positivas</strong> y <strong>5 arcos unidireccionales negativos</strong>
+          (35 arcos dirigidos en total), aplicamos <strong>Floyd-Warshall</strong> para obtener las distancias mínimas entre
+          todos los pares, reconstruir los caminos <code>M → J</code>, <code>O → P</code> y <code>C → K</code>, construir las
+          matrices <code>D</code> y <code>P</code>, y verificar si existe algún ciclo negativo.
+        </p>
+        <div class="pill-row">
+          <span class="pill cyan">13 Vértices · 35 Arcos</span>
+          <span class="pill purple">5 Arcos Negativos</span>
+          <span class="pill green">Complejidad: O(V³) = 2.197 pasos</span>
+          <span class="pill amber">Sin Ciclos Negativos</span>
+        </div>
+      </div>
+
+      <!-- 2.1 Teoría -->
+      <div class="card">
+        <div class="card-title">
+          <span class="inciso-badge theory">Teoría · Unidad 7 (Diap. 18–30)</span>
+          ¿Cómo funcionan las matrices D y P y cuál es la lógica de Floyd-Warshall?
+        </div>
+        <div class="grid-2">
+          <div>
+            <h3>1. Matriz de Distancias D (13 × 13)</h3>
+            <p>
+              <strong>Fila <code>i</code> = origen</strong>, <strong>Columna <code>j</code> = destino</strong>.
+              Comienza como la matriz de adyacencia inicial <code>D⁰</code>: <code>0</code> en la diagonal,
+              el peso del arco si existe conexión directa <code>i → j</code>, e <code>∞</code> si no hay arco directo.
+            </p>
+            <p>
+              Luego prueba, uno por uno, cada vértice <code>k</code> como <strong>nodo intermedio permitido</strong>
+              (desde <code>k = A</code> hasta <code>k = P</code>) preguntando si conviene pasar por <code>k</code>:
+            </p>
+          </div>
+          <div>
+            <h3>2. Matriz de Predecesores P (13 × 13)</h3>
+            <p>
+              <code>D</code> solo indica <em>cuánto cuesta</em> llegar, pero no <em>por qué nodos</em>.
+              La matriz <code>P[i][j]</code> guarda <strong>el nodo inmediatamente anterior a <code>j</code></strong>
+              en el camino mínimo desde <code>i</code> hasta <code>j</code>.
+            </p>
+            <p>
+              Al inicio, si hay arco directo <code>i → j</code>, entonces <code>P[i][j] = i</code>. Cada vez que pasar
+              por <code>k</code> mejora la distancia, actualizamos <code>P[i][j] = P[k][j]</code>.
+            </p>
+          </div>
+        </div>
+
+        <div class="formula-box">Para k = 0 hasta V-1:                // Vértice intermedio permitido (A, B, ..., P)
+  Para i = 0 hasta V-1:              // Vértice origen
+    Para j = 0 hasta V-1:            // Vértice destino
+      Si D[i][k] + D[k][j] &lt; D[i][j]:
+        D[i][j] = D[i][k] + D[k][j]  // Mejora la distancia mínima pasando por k
+        P[i][j] = P[k][j]            // El último salto antes de j viene desde k</div>
+
+        <div class="callout purple">
+          <strong>Peso negativo vs. Ciclo negativo (Unidad 7, Diap. 20):</strong>
+          Un <strong>peso negativo</strong> en una arista suelta (como <code>D→B (-2)</code> o <code>P→O (-3)</code>)
+          <strong>NO es un problema</strong> para Floyd-Warshall. Lo peligroso es un <strong>ciclo negativo</strong>
+          (un camino cerrado que empieza y vuelve al mismo nodo sumando menos que 0), porque permitiría dar vueltas infinitas
+          bajando el costo hacia −∞. Floyd-Warshall lo detecta al final mirando la diagonal:
+          <strong>hay ciclo negativo ⇔ existe algún vértice <code>i</code> con <code>D[i][i] &lt; 0</code></strong>.
+        </div>
+      </div>
+
+      <!-- 2.2 Grafo SVG Interactivo + Incisos A, B y C -->
+      <div class="card">
+        <div class="card-title">
+          <span class="inciso-badge">Incisos A, B y C</span>
+          Grafo Interactivo y Reconstrucción Paso a Paso de M→J, O→P y C→K
+        </div>
+        <p>
+          Seleccioná cualquiera de los 3 incisos del examen (o probá cualquier otro par de vértices del grafo) para
+          <strong>iluminar el camino mínimo sobre el grafo</strong>, ver los pesos de cada arco y seguir la reconstrucción
+          hacia atrás en la matriz de predecesores <code>P</code> (tal como se ve en Unidad 7, Diapositiva 29):
+        </p>
+
+        <div class="controls-bar">
+          <button class="btn green active" data-fw-pair="M,J">Inciso A: M → J (dist = 14)</button>
+          <button class="btn green" data-fw-pair="O,P">Inciso B: O → P (dist = 9)</button>
+          <button class="btn green" data-fw-pair="C,K">Inciso C: C → K (dist = 5)</button>
+          <span class="mono" style="color: var(--text-muted); margin-left: 8px;">Consulta libre:</span>
+          <select id="fw-orig" class="select-input"></select>
+          <span class="mono">→</span>
+          <select id="fw-dest" class="select-input"></select>
+          <button id="fw-custom-btn" class="btn">Calcular</button>
+        </div>
+
+        <div class="svg-frame" id="p2-grafo-svg"></div>
+
+        <div id="p2-camino-detalle" class="callout green" style="margin-top: 16px;"></div>
+
+        <h3>Resumen verificado de los Incisos A, B y C</h3>
+        <div class="grid-3">
+          <div class="kpi-box">
+            <div class="kpi-label">Inciso A · M → J</div>
+            <div class="kpi-value text-green">Distancia = 14</div>
+            <div class="kpi-sub mono">M → H → D → B → A → J<br />3 + 3 + (-2) + 5 + 5 = 14</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-label">Inciso B · O → P</div>
+            <div class="kpi-value text-green">Distancia = 9</div>
+            <div class="kpi-sub mono">O → K → E → P<br />3 + (-1) + 7 = 9</div>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-label">Inciso C · C → K</div>
+            <div class="kpi-value text-green">Distancia = 5</div>
+            <div class="kpi-sub mono">C → L → K<br />7 + (-2) = 5</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2.3 Incisos D y E + Slider de evolución k -->
+      <div class="card">
+        <div class="card-title">
+          <span class="inciso-badge result">Incisos D y E</span>
+          Evolución paso a paso por iteración k, Matriz Final D y Matriz de Predecesores P
+        </div>
+        <p>
+          Usá el deslizador para observar cómo evoluciona la matriz de distancias desde <strong><code>D⁰</code> (inicial)</strong>
+          hasta la <strong>matriz final <code>D¹³</code> (Inciso D)</strong> al ir habilitando cada nodo intermedio <code>k</code>.
+          Por defecto se muestra el estado final completo (<code>k = P</code>):
+        </p>
+
+        <div class="slider-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <strong id="fw-k-titulo" style="color: var(--cyan);"></strong>
+            <span id="fw-k-mejoras" class="pill green"></span>
+          </div>
+          <input type="range" id="fw-k-slider" min="0" max="13" value="13" />
+          <div id="fw-k-ejemplos" style="font-size: 0.85rem; color: var(--text-secondary); font-family: var(--font-mono);"></div>
+        </div>
+
+        <div class="controls-bar">
+          <button id="fw-ver-d" class="btn active">Ver Matriz de Distancias D (Inciso D)</button>
+          <button id="fw-ver-p" class="btn">Ver Matriz de Predecesores P (Inciso E)</button>
+          <button id="fw-ver-ambas" class="btn">Ver Ambas Matrices (D y P)</button>
+        </div>
+
+        <div id="p2-matriz-d-wrap">
+          <h3>Inciso D — Matriz de Distancias D (fila = origen, columna = destino)</h3>
+          <div class="table-wrap" style="padding: 10px; background: #0b1222;" id="p2-matriz-d"></div>
+        </div>
+
+        <div id="p2-matriz-p-wrap" style="margin-top: 20px;">
+          <h3>Inciso E — Matriz de Reconstrucción de Caminos / Predecesores P</h3>
+          <div class="table-wrap" style="padding: 10px; background: #0b1222;" id="p2-matriz-p"></div>
+        </div>
+      </div>
+
+      <!-- 2.4 Inciso F -->
+      <div class="card">
+        <div class="card-title">
+          <span class="inciso-badge">Inciso F</span>
+          Verificación de Ciclos Negativos
+        </div>
+        <p>
+          Tras finalizar todas las iteraciones (<code>k = A..P</code>), inspeccionamos la <strong>diagonal principal</strong>
+          de la matriz final <code>D</code>:
+        </p>
+        <div id="p2-diagonal-f" class="formula-box"></div>
+        <div class="callout green">
+          <strong>Conclusión del Inciso F: NO EXISTE NINGÚN CICLO NEGATIVO en el grafo.</strong><br />
+          Todos los valores <code>D[i][i]</code> son exactamente <code>0</code>. Aunque existen 5 arcos negativos
+          (<code>D→B (-2)</code>, <code>I→C (-2)</code>, <code>K→E (-1)</code>, <code>L→K (-2)</code>, <code>P→O (-3)</code>),
+          todo ciclo cerrado que los incluye suma estrictamente positivo (por ejemplo: <code>K→E→L→K = -1 + 5 - 2 = +2</code>;
+          <code>D→B→E→D = -2 + 4 + 3 = +5</code>; <code>P→O→K→E→P = -3 + 3 - 1 + 7 = +6</code>).
+          Por lo tanto, todas las distancias mínimas calculadas son válidas y finitas.
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <button class="btn" data-jump="sec-punto1">← Anterior: Punto 1 (Levenshtein)</button>
+        <button class="btn active" data-jump="sec-punto3">Siguiente: Punto 3 (Matriz 20×20) →</button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 3: PUNTO 3 — BÚSQUEDA DE PALABRAS EN MATRIZ 20x20
+         ==================================================================== -->
+    <section id="sec-punto3" class="section-view">
+      <div class="hero-card">
+        <div class="eyebrow">Sección 3 · Unidades 3 y 6 — Transforma y Conquista vs. Fuerza Bruta</div>
+        <h1>Punto 3: Búsqueda de Palabras en una Matriz de Caracteres (20×20)</h1>
+        <p>
+          En una grilla de <strong>20 × 20 letras (400 celdas)</strong> se ocultan las palabras
+          <code>ARBOL</code>, <code>HEAPS</code>, <code>SORTS</code>, <code>NODOS</code> y <code>GRAFO</code>,
+          pudiendo formarse en cualquiera de las <strong>8 direcciones posibles</strong> (verticales, horizontales y diagonales).
+          Debemos elegir y justificar una estrategia eficiente (<strong>Inciso A</strong>) y hallar todas las ubicaciones exactas (<strong>Inciso B</strong>).
+        </p>
+        <div class="pill-row">
+          <span class="pill green">Estrategia: Árbol Trie + 8 Direcciones</span>
+          <span class="pill purple">Transforma y Conquista (U6)</span>
+          <span class="pill amber">58.2% menos comparaciones que Fuerza Bruta</span>
+        </div>
+      </div>
+
+      <!-- 3.1 Inciso A -->
+      <div class="card">
+        <div class="card-title">
+          <span class="inciso-badge">Inciso A</span>
+          ¿Qué estrategia elegiste? — Teoría, paso a paso y contraste contra Fuerza Bruta
+        </div>
+        <p>
+          Elegimos la estrategia de <strong>Árbol de Prefijos (Trie) + Recorrido Direccional en 8 Sentidos con Poda Temprana</strong>,
+          enmarcada en el paradigma <strong>Transforma y Conquista — Cambio de Representación (Unidad 6)</strong> y conectada
+          con la búsqueda de múltiples patrones vista en <strong>Unidad 3 (Diapositivas 28–29)</strong>.
+        </p>
+
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-circle">1</div>
+            <div>
+              <h4>Fase de Transformación (Preprocesamiento en O(ΣL))</h4>
+              <p>Insertamos las 5 palabras buscadas (<code>ARBOL, HEAPS, SORTS, NODOS, GRAFO</code>) en un <strong>Árbol Trie</strong>. En la raíz quedan solo las 5 letras iniciales válidas: <code>{A, G, H, N, S}</code>.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-circle">2</div>
+            <div>
+              <h4>Recorrido único de la matriz con poda inmediata en O(1)</h4>
+              <p>Recorremos las 400 celdas <strong>una sola vez</strong> (a diferencia de Fuerza Bruta, que recorre las 400 celdas <em>una vez por cada palabra</em>). Si la letra <code>M[r][c]</code> no pertenece a <code>{A, G, H, N, S}</code>, <strong>podamos en O(1) las 8 direcciones de golpe</strong>. En esta grilla, <strong>316 de 400 celdas</strong> se descartan instantáneamente.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-circle">3</div>
+            <div>
+              <h4>Avance guiado por prefijos en las 8 direcciones</h4>
+              <p>Solo en las 84 celdas cuya letra existe en la raíz del Trie probamos los 8 vectores <code>(dr, dc)</code>: <code>(-1,0), (1,0), (0,-1), (0,1), (-1,-1), (-1,1), (1,-1), (1,1)</code>. Avanzamos mientras la siguiente letra exista como hijo del nodo actual en el Trie; si no existe, cortamos al instante.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 18px;">
+          <div>
+            <h3>Estructura del Árbol Trie construido</h3>
+            <pre class="tree-pre">(raíz Trie)
+├── A ─► R ─► B ─► O ─► L  [FIN: ARBOL]
+├── G ─► R ─► A ─► F ─► O  [FIN: GRAFO]
+├── H ─► E ─► A ─► P ─► S  [FIN: HEAPS]
+├── N ─► O ─► D ─► O ─► S  [FIN: NODOS]
+└── S ─► O ─► R ─► T ─► S  [FIN: SORTS]</pre>
+          </div>
+          <div>
+            <h3>Contraste empírico real: Trie vs. Fuerza Bruta 2D</h3>
+            <div id="p3-comparativa-barras"></div>
+            <div class="callout green" style="margin-top: 12px;">
+              <strong>Escalabilidad teórica:</strong> Fuerza Bruta cuesta <code>O(W · R · C · L)</code> (crece linealmente con la cantidad de palabras <code>W</code>),
+              mientras que el Trie cuesta <code>O(ΣL + R · C · L_máx)</code>: incluso si buscáramos 1.000 palabras, la matriz se sigue recorriendo una sola vez.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3.2 Inciso B -->
+      <div class="card">
+        <div class="card-title">
+          <span class="inciso-badge result">Inciso B</span>
+          Ubicación exacta de las 5 palabras ocultas y Matriz 20×20 Interactiva
+        </div>
+        <p>
+          Hacé clic en cualquiera de los botones de abajo para <strong>enfocar una palabra</strong> sobre la matriz 20×20
+          (o mostrar todas juntas). Se informan tanto coordenadas <strong>base 0 (programación: 0..19)</strong> como
+          <strong>base 1 (lectura en hoja: 1..20)</strong>:
+        </p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Palabra</th>
+                <th>Inicio (base 0)</th>
+                <th>Fin (base 0)</th>
+                <th>Inicio → Fin (base 1)</th>
+                <th>Dirección</th>
+                <th>Celdas exactas</th>
+              </tr>
+            </thead>
+            <tbody id="p3-tabla-palabras"></tbody>
+          </table>
+        </div>
+
+        <div id="p3-filter-buttons" class="controls-bar"></div>
+        <div class="table-wrap" style="padding: 14px; background: #0b1222;">
+          <div id="p3-sopa-container"></div>
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <button class="btn" data-jump="sec-punto2">← Anterior: Punto 2 (Floyd-Warshall)</button>
+        <button class="btn active" data-jump="sec-punto4">Siguiente: Punto 4 (1.000.000 Datos) →</button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECCIÓN 4: PUNTO 4 — MEJOR PERÍODO DE UTILIDAD (1.000.000 DATOS)
+         ==================================================================== -->
+    <section id="sec-punto4" class="section-view">
+      <div class="hero-card">
+        <div class="eyebrow">Sección 4 · Unidades 2, 4, 5, 6 y 7 — Análisis Empírico y Teórico a Escala</div>
+        <h1>Punto 4: "Mejor período de utilidad" con 1.000.000 de datos</h1>
+        <p>
+          Sobre el archivo real <code class="mono">datos_1millón.txt</code> (<strong>1.000.000 de enteros</strong> en
+          <code>[-100, 100]</code>, 201 valores únicos con ~4.975 repetidos por valor), resolvemos y contrastamos empíricamente
+          las <strong>Partes A, B y C</strong>. Elegí una sub-pestaña para estudiar cada parte por separado sin amontonar información:
+        </p>
+        <div class="pill-row">
+          <span class="pill green">Parte A · Kadane O(n) vs. D&amp;V O(n log n)</span>
+          <span class="pill cyan">Parte B · Top-10 No Solapados (Max-Heap)</span>
+          <span class="pill amber">Parte C · QuickSelect Lomuto vs. Hoare vs. Merge Sort</span>
+        </div>
+      </div>
+
+      <!-- Sub-pestañas de Punto 4 -->
+      <div class="subtabs">
+        <button class="btn active" data-p4-tab="p4-parte-a">Parte A — Sub-Arreglo Máximo</button>
+        <button class="btn" data-p4-tab="p4-parte-b">Parte B — Top-10 No Solapados</button>
+        <button class="btn" data-p4-tab="p4-parte-c">Parte C — Mediana, Percentiles y Reporte</button>
+      </div>
+
+      <!-- ============== PARTE A ============== -->
+      <div id="p4-parte-a" class="subtab-panel active">
+        <div class="card">
+          <div class="card-title">
+            <span class="inciso-badge theory">Teoría · Unidad 5 (Diap. 10–22)</span>
+            Parte A: ¿Cómo resuelven el Sub-Arreglo Máximo Kadane y Divide y Vencerás?
+          </div>
+          <div class="grid-2">
+            <div class="kpi-box">
+              <div class="kpi-label" style="color: var(--green);">Algoritmo 1 · Kadane — O(n) (Prog. Dinámica)</div>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 6px;">
+                Recorre el arreglo <strong>una sola vez</strong>. En cada día <code>i</code> toma una decisión local óptima:
+                <strong>¿conviene seguir acumulando</strong> la racha anterior (<code>actual + P[i]</code>) o <strong>reiniciar</strong>
+                una nueva racha desde <code>P[i]</code> (cuando lo arrastrado era negativo y perjudica)?
+              </p>
+              <div class="formula-box" style="margin-bottom: 0;">actual = max(P[i], actual + P[i])
+max_global = max(max_global, actual)
+// 1 pasada → Θ(n) tiempo | O(1) espacio</div>
+            </div>
+            <div class="kpi-box">
+              <div class="kpi-label" style="color: var(--amber);">Algoritmo 2 · Divide y Vencerás — O(n log n)</div>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 6px;">
+                Parte el arreglo en mitades <code>[l..m]</code> y <code>[m+1..r]</code>, resuelve recursivamente ambos lados
+                y además calcula en <code>Θ(n)</code> el mejor tramo que <strong>cruza el centro</strong> (expandiendo desde <code>m</code>
+                hacia la izquierda y desde <code>m+1</code> hacia la derecha). El ganador es el máximo de los 3.
+              </p>
+              <div class="formula-box" style="margin-bottom: 0;">T(n) = 2·T(n/2) + Θ(n)
+Por Teorema Maestro (Caso 2):
+T(n) = Θ(n log n) | O(log n) pila</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <span class="inciso-badge result">Resultados Reales · n = 1.000.000</span>
+            Mediciones Empíricas, Contraste Teórico y Gráfico de Utilidad Acumulada
+          </div>
+
+          <div id="p4a-kpis" class="grid-4" style="margin-bottom: 18px;"></div>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Algoritmo</th>
+                  <th>Cota Teórica</th>
+                  <th>Comparaciones Reales</th>
+                  <th>Tiempo Empírico</th>
+                  <th>Memoria Auxiliar</th>
+                  <th>Contraste con Teoría</th>
+                </tr>
+              </thead>
+              <tbody id="p4a-tabla"></tbody>
+            </table>
+          </div>
+
+          <div id="p4a-barras" style="margin: 18px 0;"></div>
+
+          <h3>Gráfico Real de Utilidad Acumulada (1.000.000 de días) — Tramo Óptimo Resaltado</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            ¿Por qué graficamos la <strong>utilidad acumulada (suma de prefijos)</strong>? Porque matemáticamente la suma
+            de cualquier tramo <code>[l..r]</code> es <code>Prefijo[r] - Prefijo[l-1]</code>; por eso el <strong>sub-arreglo máximo</strong>
+            se ve al instante como la <strong>mayor subida vertical neta</strong> de la curva (desde el valle en el día <code>121.945</code>
+            hasta el pico en el día <code>233.209</code>, ganando <strong>+59.335</strong>):
+          </p>
+          <div class="svg-frame" id="p4a-grafico-svg" style="margin-top: 12px;"></div>
+        </div>
+      </div>
+
+      <!-- ============== PARTE B ============== -->
+      <div id="p4-parte-b" class="subtab-panel">
+        <div class="card">
+          <div class="card-title">
+            <span class="inciso-badge theory">Teoría · Unidad 6 + Divide-y-Vencerás Incremental</span>
+            Parte B: ¿Cómo hallar los Top-10 períodos contiguos no solapados?
+          </div>
+          <p>
+            Queremos los <strong>k = 10 mejores períodos disjuntos</strong> (sin que ningún día se comparta entre dos períodos).
+            En lugar de volver a analizar el arreglo completo desde cero o marcar elementos uno por uno, integramos
+            <strong>Max-Heap Binario (Unidad 6)</strong> con <strong>Divide-y-Vencerás incremental por particionamiento de intervalos</strong>:
+          </p>
+          <div class="steps-list">
+            <div class="step-item">
+              <div class="step-circle">1</div>
+              <div>
+                <h4>Inicialización del Max-Heap</h4>
+                <p>Corremos Kadane sobre el intervalo completo <code>[0, 999.999]</code> para hallar su mejor sub-arreglo <code>(S₁, l₁, r₁)</code> e insertamos el candidato <code>(S₁, l₁, r₁, seg_ini=0, seg_fin=999.999)</code> en el <strong>Max-Heap</strong>.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-circle">2</div>
+              <div>
+                <h4>Extracción Greedy del máximo disponible en O(log k)</h4>
+                <p>Extraemos la raíz del Max-Heap: garantiza que es el mejor tramo contiguo entre <strong>todos los huecos libres</strong>. Lo agregamos al Top-10.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-circle">3</div>
+              <div>
+                <h4>Divide-y-Vencerás incremental (Partición del segmento elegido)</h4>
+                <p>Al reservar <code>[l*, r*]</code> dentro de <code>[seg_ini, seg_fin]</code>, ese segmento queda partido en a lo sumo <strong>2 sub-segmentos disjuntos</strong>: <code>[seg_ini, l* - 1]</code> (izquierda) y <code>[r* + 1, seg_fin]</code> (derecha). Calculamos Kadane <strong>solo en esos dos trozos</strong> (sin tocar los demás segmentos ya guardados en el heap) y los insertamos al Max-Heap. Repetimos hasta completar los 10 (y cortamos apenas extraemos el 10°).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout purple" style="margin-top: 14px;">
+            <strong>Análisis de costo y nota teórica:</strong>
+            Como solo se particionan <code>k - 1 = 9</code> segmentos (generando a lo sumo 2 sub-segmentos cada vez), se ejecutan como máximo
+            <strong><code>2k - 1 = 19</code> llamadas parciales a Kadane</strong> sobre intervalos cada vez más chicos →
+            <strong>Tiempo: O(k·n + k log k)</strong>, <strong>Espacio auxiliar: O(k)</strong> en el heap (0 copias del millón de datos).
+            <em>Nota:</em> este criterio greedy elige en cada paso el mejor período libre disponible; si se buscara maximizar la suma conjunta permitiendo partir un período ya elegido para descartar un valle interno, se usaría PD O(k·n) o Segment Tree con inversión de signos en O(n + k log n).
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <span class="inciso-badge result">Resultados Verificados · 0 Solapamientos</span>
+            Top-10 Períodos Contiguos Disjuntos y Línea Temporal
+          </div>
+          <div id="p4b-kpis" class="grid-4" style="margin-bottom: 16px;"></div>
+          <div class="svg-frame" id="p4b-timeline-svg" style="margin-bottom: 18px;"></div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Ranking</th>
+                  <th>Utilidad Máxima</th>
+                  <th>Inicio (inclusive)</th>
+                  <th>Fin (inclusive)</th>
+                  <th>Duración (días)</th>
+                  <th>Segmento de origen</th>
+                </tr>
+              </thead>
+              <tbody id="p4b-tabla"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============== PARTE C ============== -->
+      <div id="p4-parte-c" class="subtab-panel">
+        <div class="card">
+          <div class="card-title">
+            <span class="inciso-badge theory">Teoría · Unidades 4 y 5</span>
+            Parte C: QuickSelect (Lomuto vs. Hoare), Merge Sort y Convención de Mediana
+          </div>
+          <div class="callout amber">
+            <strong>Convenciones explícitas para n = 1.000.000 (par):</strong>
+            <ul class="clean-list" style="margin-bottom: 0;">
+              <li><strong>Mediana (p50) para n par:</strong> promedio aritmético de los dos elementos centrales del arreglo ordenado:
+                <code>(P_ord[n/2 - 1] + P_ord[n/2]) / 2 = (P_ord[499.999] + P_ord[500.000]) / 2 = (0 + 0) / 2 = 0.0</code>.
+                En QuickSelect iterativo, al ubicar <code>k₁ = 499.999</code>, todos los elementos a su derecha son <code>≥ a[k₁]</code>, por lo que <code>k₂ = 500.000</code> es simplemente <code>min(a[k₁+1..n-1])</code> sin necesidad de re-particionar.</li>
+              <li><strong>Percentiles p90 y p95:</strong> método de rango más cercano (0-indexado): <code>k = ceil((p/100)·n) - 1</code> →
+                <code>p90</code> en índice <code>899.999</code> (valor <code>80</code>) y <code>p95</code> en índice <code>949.999</code> (valor <code>90</code>).</li>
+            </ul>
+          </div>
+
+          <div class="grid-3" style="margin-top: 14px;">
+            <div class="kpi-box">
+              <div class="kpi-label" style="color: var(--amber);">QuickSelect · Partición de Lomuto (U4)</div>
+              <p style="font-size: 0.87rem; color: var(--text-secondary); margin-top: 6px;">
+                Usa 2 índices <code>i, j</code> que avanzan de izquierda a derecha agrupando <code>≤ pivote</code> a la izquierda.
+                <strong>Debilidad clave:</strong> cuando hay muchos elementos iguales al pivote, todos caen del mismo lado y en un bloque de <em>d</em> repetidos degenera a <strong>O(d²)</strong>.
+              </p>
+            </div>
+            <div class="kpi-box">
+              <div class="kpi-label" style="color: var(--green);">QuickSelect · Partición de Hoare (U5)</div>
+              <p style="font-size: 0.87rem; color: var(--text-secondary); margin-top: 6px;">
+                Usa 2 índices <code>i</code> (izquierda) y <code>j</code> (derecha) que caminan hacia el centro e intercambian elementos mal ubicados.
+                <strong>Fortaleza clave (U5 Diap. 30):</strong> detiene ambos punteros ante iguales y parte bloques repetidos por la mitad en <strong>O(d)</strong> con muchos menos swaps.
+              </p>
+            </div>
+            <div class="kpi-box">
+              <div class="kpi-label" style="color: var(--cyan);">Merge Sort · Baseline (U5)</div>
+              <p style="font-size: 0.87rem; color: var(--text-secondary); margin-top: 6px;">
+                Ordena el millón completo en <strong>Θ(n log n)</strong> garantizado (sin peor caso cuadrático), pero exige <strong>memoria auxiliar Θ(n)</strong>
+                y realiza ~18.7 millones de comparaciones + 20 millones de escrituras.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <span class="inciso-badge result">Resultados, Validación (C.2) y Reporte (C.3)</span>
+            Comparativa Empírica Real, Validación con Búsqueda Binaria y Discusión
+          </div>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Enfoque / Cuantil</th>
+                  <th>Valor</th>
+                  <th>Comparaciones</th>
+                  <th>Swaps / Escrituras</th>
+                  <th>Tiempo Empírico</th>
+                  <th>Memoria Aux.</th>
+                </tr>
+              </thead>
+              <tbody id="p4c-tabla"></tbody>
+            </table>
+          </div>
+
+          <div id="p4c-barras" style="margin: 18px 0;"></div>
+
+          <h3>Inciso C.2 — Validación sobre el arreglo ordenado (Índices + Búsqueda Binaria O(log n))</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            Verificamos cada cuantil tanto comparando la posición exacta en el arreglo ordenado de Merge Sort como ejecutando
+            <strong>Búsqueda Binaria propia (Unidad 4, solo 20 comparaciones para n = 1.000.000)</strong> para contar cuántos
+            elementos son <code>≤ umbral</code> y <code>&lt; umbral</code>, comprobando que <code>%(&lt;) &lt; p ≤ %(≤)</code>:
+          </p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Cuantil</th>
+                  <th>Valor Validado</th>
+                  <th>Elementos &lt; umbral</th>
+                  <th>Elementos ≤ umbral</th>
+                  <th>Comparaciones BB</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody id="p4c-validacion"></tbody>
+            </table>
+          </div>
+
+          <h3>Inciso C.3 — Discusión: QuickSelect vs. Ordenar todo, Repetidos y Entradas Adversas</h3>
+          <div class="steps-list">
+            <div class="step-item">
+              <div class="step-circle">1</div>
+              <div>
+                <h4>¿Por qué QuickSelect vence a ordenar todo para un solo cuantil?</h4>
+                <p id="p4c-disc-1"></p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-circle">2</div>
+              <div>
+                <h4>¿Qué pasó en este dataset real por culpa de los repetidos? (Lomuto vs. Hoare)</h4>
+                <p id="p4c-disc-2"></p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-circle">3</div>
+              <div>
+                <h4>¿Qué ocurre con entradas adversas y cómo se mitiga?</h4>
+                <p id="p4c-disc-3"></p>
+              </div>
+            </div>
+          </div>
+
+          <div id="p4c-demo-repetidos" class="callout rose" style="margin-top: 16px;"></div>
+        </div>
+      </div>
+
+      <div class="footer-nav">
+        <button class="btn" data-jump="sec-punto3">← Anterior: Punto 3 (Matriz 20×20)</button>
+        <button class="btn active" data-jump="sec-inicio">Volver al Inicio ★</button>
+      </div>
+    </section>
+
+    <p class="footer-note">
+      UNViMe — Análisis y Diseño de Algoritmos (2026) · Todos los cálculos y gráficos provienen de la ejecución real del sistema del Examen 2.
+    </p>
+  </main>
+
+  <script src="datos_examen.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
